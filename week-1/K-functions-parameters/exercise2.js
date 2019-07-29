@@ -1,8 +1,11 @@
 // Declare your function first
 
-var result = divide(3, 4);
+divide = (num1, num2) => {
+  return num1 / num2;
+};
 
-console.log(result);
+console.log(divide(3, 4));
+console.log(divide(503, 4128));
 
 // ignore below
 

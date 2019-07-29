@@ -11,7 +11,17 @@ var danielsRole = "mentor";
 
 // Write your code here
 
-/*
+whatDanielDoes = (name, danielsRole) => {
+  if (danielsRole === "mentor") {
+    console.log("Hi, I'm " + name + ", I'm a mentor.");
+  } else {
+    console.log("Hi, I'm " + name + ", I'm a student.");
+  }
+};
+
+whatDanielDoes(name, danielsRole);
+
+/* 
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

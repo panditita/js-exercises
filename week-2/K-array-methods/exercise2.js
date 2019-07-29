@@ -7,7 +7,7 @@
 var mentors = ["Daniel", "Irina", "Rares"];
 var students = ["Rukmini", "Abdul", "Austine", "Swathi"];
 
-var everyone; // complete this statement
+var everyone = students.concat(mentors.concat()); // complete this statement
 
 /*
   PLEASE IGNORE LINES BELOW
