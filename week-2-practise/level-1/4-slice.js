@@ -1,6 +1,9 @@
 // Write a function `first5` that:
 // - returns the first 5 items from a provided array
 
+first5 = numbers => {
+  return numbers.slice(0, 5);
+};
 /*
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
