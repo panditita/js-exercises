@@ -5,11 +5,14 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return; // complete this statement
+  const result = arr.slice(0);
+  result[index] = value;
+  return result;
+  //return arr.splice(arr,index,value); // complete this statement
 }
 
 /*
-  DO NOT EDIT BELOW THIS LINE
+  DO NOT EDIT ˆBELOW THIS LINE
   --------------------------- */
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];

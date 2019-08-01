@@ -5,7 +5,11 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  let index = arr.indexOf(valueToRemove);
+  if (index > -1) {
+    arr.splice(index, 1);
+  }
+  return arr; // complete this statement
 }
 
 /*

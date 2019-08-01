@@ -3,9 +3,18 @@
 // 2. Declare a new array, `percentagesFormatted`, containing
 //    - each item in `percentages` formatted by your function
 
+percentagesFormatted = arr => {
+  // const numbertoString = arr.map(String)
+  const formatedNumber = [];
+  arr.map(String).forEach(numberToString => {
+    return formatedNumber.push(numberToString + "%");
+  });
+  return formatedNumber;
+};
+
 var percentages = [1, 23, 92, 18];
 
-console.log(percentagesFormatted);
+console.log(percentagesFormatted(percentages));
 
 /*
   EXPECTED RESULT
