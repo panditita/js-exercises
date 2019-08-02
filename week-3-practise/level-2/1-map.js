@@ -1,19 +1,20 @@
 /*
-I am new to London and would like to know what transport I can take to different famous locations.
-An array with London locations have been provided.
-Using .map(), print where I can go if I only want to use the river boat.
-Note: only the names should be printed, not the means of transport.
+  I am new to London and would like to know what transport I can take to different famous locations.
+  An array with London locations have been provided.
+  Using .filter(), .map(), and any other array methods required, create:
+  - a new array of stations with travel by river boat
+  Note: only the names should be printed, not the means of transport.
 */
 
-var londonLocations = [
-  ["Angel", "tube", "bus"],
-  ["London Bridge", "tube", "bus", "river boat"],
-  ["Tower bridge", "tube", "bus"],
-  ["Greenwich", "tube", "bus", "river boat"]
+var stationTransportOptionsPairs = [
+  ["Angel", ["tube", "bus"]],
+  ["London Bridge", ["tube", "bus", "river boat"]],
+  ["Tower bridge", ["tube", "bus"]],
+  ["Greenwich", ["tube", "bus", "river boat"]]
 ];
 
 // First map, loops into the object and creates individual arrays
-var locationsByBoat = londonLocations.map(oneLocation => {
+var stationsWithRiverBoat = londonLocations.map(oneLocation => {
   var visitLocations = [];
   // Second map, loops into each element of each array
   oneLocation.map(withBoat => {
@@ -30,20 +31,7 @@ var locationsByBoat = londonLocations.map(oneLocation => {
   });
 });
 
-console.log(locationsByBoat);
+console.log(stationsWithRiverBoat);
 
-/* EXPECTED OUTPUT
-["London bridge", "Greenwich"]
-function test(){
-    var super_array =[];
-    for (var i=1;i<=3;i++){
-        var subarray=[];
-        for (var u=1;u<=4-i;u++){
-            sub_array.push(u);
-            super_array.push(subarray);
-        }
-    }
-    alert(super_array);
-}
-
-*/
+// Expected output:
+// ["London Bridge", "Greenwich"]

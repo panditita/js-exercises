@@ -1,6 +1,6 @@
 /*
-You are given a list of some London street names.
-We would like to know all of the names which contain 'Lane' their name.
+  You are given a list of some London street names.
+  We would like to know all of the names which contain 'Lane' their name.
 */
 
 var streetNames = [
@@ -545,6 +545,7 @@ var streetNames = [
   "Wrestler's Court"
 ];
 
+<<<<<<< HEAD
 var laneNames = streetNames.filter(streetName => {
   if (streetName.match("Lane")) {
     return streetName;
@@ -553,6 +554,9 @@ var laneNames = streetNames.filter(streetName => {
 // Complete this line
 
 //let op = list.filter(data => (data.name == 'Krunal'));
+=======
+var laneNames; // Complete this line
+>>>>>>> 676d64108c04a28f7fef823825c3b6d56ced060b
 
 console.log(laneNames);
 console.log(laneNames.length);
