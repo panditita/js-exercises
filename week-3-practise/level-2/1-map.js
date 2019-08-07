@@ -14,7 +14,7 @@ var stationTransportOptionsPairs = [
 ];
 
 // First map, loops into the object and creates individual arrays
-var stationsWithRiverBoat = londonLocations.map(oneLocation => {
+var stationsWithRiverBoat = stationTransportOptionsPairs.map(oneLocation => {
   var visitLocations = [];
   // Second map, loops into each element of each array
   oneLocation.map(withBoat => {
@@ -26,9 +26,7 @@ var stationsWithRiverBoat = londonLocations.map(oneLocation => {
       visitLocations.push(location.concat());
     }
   });
-  return visitLocations.filter(empty => {
-    return empty != null;
-  });
+  return visitLocations;
 });
 
 console.log(stationsWithRiverBoat);

@@ -39,6 +39,15 @@ var writers = [
   }
 ];
 
+const entries = Object.entries(writers);
+for (const [key, value] of entries) {
+  if (value.alive !== false) {
+    console.log(
+      `Hi, my name is ${value.firstName} ${value.lastName}. I am ${value.age} years old, and work as a ${value.occupation}.`
+    );
+  }
+}
+
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */

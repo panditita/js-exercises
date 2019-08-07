@@ -9,5 +9,7 @@ var kitten = {
 };
 
 // YOUR CODE GOES BELOW HERE
-
+console.log(kitten.ageMonths);
+console.log(kitten.furColour);
+console.log(kitten.isFemale);
 // YOUR CODE GOES ABOVE HERE
