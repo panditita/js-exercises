@@ -13,21 +13,11 @@ var stationTransportOptionsPairs = [
   ["Greenwich", ["tube", "bus", "river boat"]]
 ];
 
-// First map, loops into the object and creates individual arrays
-var stationsWithRiverBoat = stationTransportOptionsPairs.map(oneLocation => {
-  var visitLocations = [];
-  // Second map, loops into each element of each array
-  oneLocation.map(withBoat => {
-    // Then it compares each string agains 'boat' to find a match
-    var location = [];
-    if (withBoat.match("boat")) {
-      // if the comparison is valid then it stores that value into location and location into Visit
-      location.push(oneLocation[0]);
-      visitLocations.push(location.concat());
-    }
-  });
-  return visitLocations;
-});
+var stationsWithRiverBoat = stationTransportOptionsPairs
+  .filter(oneLocation => {
+    return oneLocation[1].includes("river boat");
+  })
+  .map(place => place[0]);
 
 console.log(stationsWithRiverBoat);
 

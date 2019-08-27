@@ -9,7 +9,19 @@
 */
 
 // Complete this function -->
-function fizzBuzz() {}
+function fizzBuzz(sequence) {
+  sequence.forEach(number => {
+    if (number % 3 == 0 && number % 5 == 0) {
+      console.log("FizzBuzz");
+    } else if (number % 5 == 0) {
+      console.log("Buzz");
+    } else if (number % 3 == 0) {
+      console.log("Fizz");
+    } else {
+      console.log(number);
+    }
+  });
+}
 
 // DEBUG
 var sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

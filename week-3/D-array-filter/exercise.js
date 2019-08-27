@@ -7,7 +7,15 @@
 */
 
 function findPairs(students, mentors, pairsByIndex) {
-  var pairsByIndexFiltered; // <-- Complete this statement
+  var pairsByIndexFiltered = pairsByIndex.filter(pair => {
+    if (
+      (pair !== null || false) &&
+      typeof pair !== "string" &&
+      pair.length >= 2
+    ) {
+      return pair;
+    }
+  }); // <-- Complete this statement
 
   var pairs = pairsByIndexFiltered.map(function(indexes) {
     var student = students[indexes[0]];

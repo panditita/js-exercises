@@ -552,8 +552,6 @@ var laneNames = streetNames.filter(streetName => {
 });
 // Complete this line
 
-//let op = list.filter(data => (data.name == 'Krunal'));
-
 console.log(laneNames);
 console.log(laneNames.length);
 

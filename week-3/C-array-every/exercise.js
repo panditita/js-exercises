@@ -6,7 +6,13 @@
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 
 // -- Complete this function -->
-function hasOnlyStudents() {}
+function hasOnlyStudents(group) {
+  return group.every(checkIfMentorsExists);
+}
+
+checkIfMentorsExists = name => {
+  return students.includes(name);
+};
 
 // DEBUG
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
@@ -19,6 +25,6 @@ if (groupIsOnlyStudents) {
   console.log("The group does not contain only students");
 }
 
-// Expected output: The group does not contain only studnets
+// Expected output: The group does not contain only students
 
 module.exports = { hasOnlyStudents };

@@ -8,6 +8,9 @@
 
 function findPairs(students, mentors, pairsByIndex) {
   // -- Write your code here -->
+  valueNull = value => {
+    return value === null;
+  };
 
   if (pairsByIndex.some(valueNull)) {
     return false;
@@ -19,10 +22,6 @@ function findPairs(students, mentors, pairsByIndex) {
   });
   return pairs;
 }
-
-valueNull = value => {
-  return value === null;
-};
 
 // DEBUG
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
