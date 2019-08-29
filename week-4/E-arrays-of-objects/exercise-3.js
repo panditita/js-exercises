@@ -48,7 +48,6 @@ var restaurant3 = {
 };
 
 var restaurants = [restaurant1, restaurant2, restaurant3];
-
 /*
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
@@ -59,13 +58,25 @@ var restaurantFinderApplication = {
   applicationVersion: "1.0",
   restaurants: restaurants,
   findAvailableRestaurants: function(numberOfPeople) {
-    // Complete here
+    return restaurants.map(restaurant => {
+      if (restaurant.totalSeats >= numberOfPeople) {
+        return restaurant.name;
+      }
+    });
   },
   findRestaurantServingDish: function(dishName) {
-    // Complete here
+    return restaurants.map(restaurant => {
+      if (restaurant.menu.includes(dishName)) {
+        return restaurant.name;
+      }
+    });
   },
   countNumberOfRestaurantsInArea: function(area) {
-    // Complete here
+    return restaurants.filter(restaurant => {
+      if (restaurant.address.area === area) {
+        return area;
+      }
+    }).length;
   }
 };
 
