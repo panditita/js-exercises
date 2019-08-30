@@ -17,7 +17,10 @@
 document.querySelector("#button1").addEventListener("click", exercise1);
 
 function exercise1() {
-  // Write your implementation here
+  var textPlacement = document.querySelector("#exercise1");
+  var addText = document.createElement("p");
+  textPlacement.appendChild(addText);
+  addText.innerText = "Etza";
 }
 
 /*
@@ -37,7 +40,10 @@ function exercise1() {
 functionThatCallsBack(exercise2);
 
 function exercise2(result) {
-  // Write your implementation here
+  var textPlacement = document.querySelector("#exercise2");
+  var result = document.createElement("p");
+  textPlacement.appendChild(result);
+  result.innerText = "Hello from the function caller";
 }
 
 /*
@@ -57,8 +63,7 @@ function exercise2(result) {
 */
 
 function exercise3(callback) {
-  // Write your implementation here
-  // Write your explanation here
+  functionThatCallsBack(callback);
 }
 
 //

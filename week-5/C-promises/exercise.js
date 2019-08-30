@@ -15,6 +15,9 @@
 */
 function exercise1() {
   var promise1 = resolvedPromise();
+  promise1.then(response => {
+    return (document.querySelector("#exercise1").textContent = response);
+  });
 }
 
 /*
@@ -28,6 +31,9 @@ function exercise1() {
 */
 function exercise2() {
   var promise2 = rejectedPromise();
+  promise2.catch(error => {
+    return (document.querySelector("#exercise2").textContent = error);
+  });
 }
 
 /*
@@ -41,6 +47,9 @@ function exercise2() {
 */
 function exercise3() {
   var promise3 = delayedPromise();
+  promise3.then(delayed => {
+    return (document.querySelector("#exercise3").textContent = delayed);
+  });
 }
 
 /*
@@ -56,6 +65,11 @@ function exercise3() {
 */
 function exercise4() {
   var promise4 = concatPromise();
+  promise4.then(promise => {
+    return (document.querySelector("#exercise4").textContent = promise.concat(
+      " Etza"
+    ));
+  });
 }
 
 /*
@@ -73,6 +87,14 @@ function exercise4() {
 
 function exercise5() {
   // Write your implementation here
+  var promise5 = returnPromise();
+  promise5.then(promise => {
+    return (document.querySelector("#exercise5").textContent = promise);
+  });
+}
+
+function returnPromise() {
+  return Promise.resolve("Hello Promises!");
 }
 
 /*
@@ -88,8 +110,17 @@ function exercise5() {
   EXPECTED RESULT: The #exercise6 element has textContent = "Something went
   wrong!"
 */
+
 function exercise6() {
   // Write your implementation here
+  var promise6 = rejectPromise();
+  promise6.catch(error => {
+    return (document.querySelector("#exercise6").textContent = error);
+  });
+}
+
+function rejectPromise() {
+  return Promise.reject("Something went wrong! :(");
 }
 
 //
