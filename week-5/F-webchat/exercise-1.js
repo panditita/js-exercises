@@ -8,7 +8,6 @@ The requirements of a basic webchat are:
 - The message list is refreshed automatically every few seconds so
 the user can keep reading the incoming messages without refreshing the page.
 
-
 ========
 Task 1
 ========
@@ -24,7 +23,6 @@ in the HTML element with the id "message-list". Use the following API to get the
 HTTP Verb: GET
 API: https://codeyourfuture.herokuapp.com/api/messages
 
-
 ===============
 Expected result
 ===============
@@ -39,16 +37,13 @@ fetch("https://codeyourfuture.herokuapp.com/api/messages")
   .then(function(response) {
     return response.json();
   })
-  .then(message => {
-    message
-      .forEach(singleMessage => {
-        var getMessage = document.querySelector("#message-list");
-        var createSingleMessage = document.createElement("p");
-        getMessage.appendChild(createSingleMessage);
-        singleMessage.map(content => {
-          return (content.style.fontSize = "16px");
-        });
-        return (createSingleMessage.innerText = singleMessage.content);
-      })
-      .catch(error => console.log("Error " + error));
+  .then(messages => {
+    messages.forEach(message => {
+      var getMessage = document.querySelector("#message-list");
+      var createMessage = document.createElement("p");
+      createMessage.style.fontSize = "18px";
+      createMessage.textContent = message.content;
+      getMessage.appendChild(createMessage);
+      console.log(createMessage);
+    });
   });
