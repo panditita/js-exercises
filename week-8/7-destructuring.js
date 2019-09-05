@@ -6,8 +6,9 @@ function destructureObj() {
     height: "20",
     width: "40"
   };
-
   /* destructure here */
+
+  const { colour, height, width } = rectangle;
 
   // Should show "red, 20, 40"
   console.log(`${colour}, ${height}, ${width}`);
@@ -22,8 +23,13 @@ function mapToVars() {
     width: "40"
   };
 
-  /* destructure here */
+  /* destructure here*/
 
+  const {
+    colour: a = colour,
+    height: b = height,
+    width: c = width
+  } = rectangle;
   // Should show "red, 20, 40"
   console.log(`${a}, ${b}, ${c}`);
 }
@@ -38,7 +44,7 @@ function selectiveDestructure() {
   };
 
   /* destructure here */
-
+  const { colour, width } = rectangle;
   // Should show "red, 20, 40"
   console.log(`${colour}, ${width}`);
 }
@@ -49,7 +55,12 @@ function destructureList() {
   const names = ["Alice", "Bob", "Charlie", "David"];
 
   /* destructure here */
-
-  // Should show "Alive, Bob, Charlie, David"
+  const { 0: a, 1: b, 2: c, 3: d } = names;
+  // Should show "Alice, Bob, Charlie, David"
   console.log(`${a}, ${b}, ${c}, ${d}`);
 }
+
+destructureObj();
+mapToVars();
+selectiveDestructure();
+destructureList();

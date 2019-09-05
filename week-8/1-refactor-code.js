@@ -15,8 +15,7 @@
 function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
   var totalIncomeTax = incomeTax1 + incomeTax2;
   var studentLoan = (salary - 17775) * 0.09;
-  var originalSalary = salary;
-  var nationalInsurance = null;
+  //var nationalInsurance = null;
 
   if (taxCode === "1150L") {
     nationalInsurance = salary * 0.1;
@@ -28,15 +27,30 @@ function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
 
   var deductions = [nationalInsurance, totalIncomeTax, studentLoan];
 
-  salary = salary - deductions[0];
-  salary = salary - deductions[1];
-  salary = salary - deductions[2];
+  const salaryAfterDeductions = deductions.forEach(deduction => {
+    if (nationalInsurance > 0) {
+      return salary - deduction;
+    } else if (totalIncomeTax > 0) {
+      return salary - deduction;
+    } else if (studentLoan > 0) {
+      return salary - deduction;
+    } else {
+      return salary;
+    }
+  });
+
+  if (salaryAfterDeductions > 0) {
+    return salaryAfterDeductions;
+  }
+  salary;
+
+  console.log(salaryAfterDeductions);
 
   return (
-    "Your gross income is £" +
-    originalSalary.toString() +
-    " and your net income is £" +
+    "Your gross income is ï¿½" +
     salary.toString() +
+    " and your net income is ï¿½" +
+    salaryAfterDeductions.toString() +
     "."
   );
 }

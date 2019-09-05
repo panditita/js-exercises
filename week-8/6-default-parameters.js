@@ -1,6 +1,6 @@
 // Correct this function so that it is using ES6 default parameter syntax
 
-function feedCat(type, amount) {
+function feedCat(type = "wet", amount = 1) {
   var type = type || "wet";
   var amount = amount || 1;
 
@@ -12,3 +12,5 @@ function feedCat(type, amount) {
 function binCollection(collect_day = "Thursday", address, time = "morning") {
   return `Your bins will be collected on ${collect_day} ${time} from ${address}`;
 }
+
+//address doesn't have a value

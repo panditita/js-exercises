@@ -10,3 +10,5 @@ function getArrivalTime(source, dest) {
 function getDepartureTime(source, dest) {
   console.log(`Your flight from ${source} to ${dest} departs at 06:00 GMT`);
 }
+
+export { getArrivalTime, getDepartureTime };

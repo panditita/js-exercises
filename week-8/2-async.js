@@ -5,16 +5,21 @@
 //
 // Hint: use the `async` keyword to create an async function
 
-function getFlightDetails() {
-  setTimeout(() => {}, 300)
-
-  return 'LDN -> JPN'
+async function getFlightDetails() {
+  let response = "LDN -> JPN";
+  await new Promise(resolve => setTimeout(resolve, 300));
+  return console.log(response);
 }
 
 function selectFlight(flight) {
-  return `Flight ${flight} selected`)
+  return console.log(`Flight ${flight} selected`);
 }
 
 function bookFlight(flight) {
-  return `Flight ${flight} booked`
+  return console.log(`Flight ${flight} booked`);
 }
+
+getFlightDetails()
+  .then(selectFlight("flight"))
+  .then(bookFlight("flight"))
+  .catch(error => console.log(`Something went wrong ${error}`));
